@@ -1,143 +1,194 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منوی دیجیتال کافه خانلی</title>
-    <style>
-        body { font-family: Tahoma, sans-serif; background-color: #f4f1ea; margin: 0; padding: 20px; color: #333; }
-        h1 { text-align: center; color: #5d4037; }
-        .container { max-width: 600px; margin: auto; }
-        .category { background: #fff; margin-bottom: 20px; padding: 15px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        h2 { color: #8d6e63; border-bottom: 2px solid #8d6e63; padding-bottom: 5px; margin-top: 0; }
-        .item { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #eee; }
-        .price { color: #d32f2f; font-weight: bold; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>کافه خانلی | منو</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Vazirmatn', Tahoma, sans-serif;
+    background: #1a120b;
+    color: #f3e9dc;
+    line-height: 1.8;
+  }
+
+  /* هدر */
+  header {
+    text-align: center;
+    padding: 50px 20px 35px;
+    background: linear-gradient(180deg, #2b1d12 0%, #1a120b 100%);
+    border-bottom: 3px solid #c89b6d;
+  }
+  header h1 {
+    font-size: 2.6rem;
+    color: #e8c39e;
+    letter-spacing: 1px;
+  }
+  header p {
+    margin-top: 8px;
+    font-size: 1.05rem;
+    color: #b99a77;
+  }
+  .divider {
+    width: 70px; height: 3px;
+    background: #c89b6d;
+    margin: 18px auto 0;
+    border-radius: 5px;
+  }
+
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 20px 18px 60px;
+  }
+
+  /* دسته‌بندی‌ها */
+  section h2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.4rem;
+    color: #e8c39e;
+    margin: 42px 0 18px;
+  }
+  section h2::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #3d2c1c;
+  }
+
+  /* آیتم‌ها */
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    padding: 12px 4px;
+    border-bottom: 1px dashed #3d2c1c;
+  }
+  .item .name {
+    font-size: 1.05rem;
+    color: #f3e9dc;
+  }
+  .item .desc {
+    display: block;
+    font-size: 0.85rem;
+    color: #9a7f63;
+    margin-top: 2px;
+  }
+  .item .dots {
+    flex: 1;
+    border-bottom: 1px dotted #4a3826;
+    transform: translateY(-4px);
+  }
+  .item .price {
+    font-weight: bold;
+    color: #c89b6d;
+    white-space: nowrap;
+  }
+
+  footer {
+    text-align: center;
+    padding: 25px;
+    font-size: 0.9rem;
+    color: #8a6f54;
+    border-top: 1px solid #3d2c1c;
+  }
+</style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>کافه خانلی</h1>
+<header>
+  <h1>☕ کافه خانلی</h1>
+  <p>منوی نوشیدنی و غذا</p>
+  <div class="divider"></div>
+</header>
 
-        <!-- بار گرم -->
-        <div class="category">
-            <h2>بار گرم</h2>
-            <div class="item"><span>اسپرسو دبل</span> <span class="price">۱۲۰,۰۰۰</span></div>
-            <div class="item"><span>اسپرسو سینگل</span> <span class="price">۱۰۰,۰۰۰</span></div>
-            <div class="item"><span>لاته</span> <span class="price">۲۰۰,۰۰۰</span></div>
-            <div class="item"><span>کاپوچینو</span> <span class="price">۱۷۰,۰۰۰</span></div>
-            <div class="item"><span>آمریکانو</span> <span class="price">۱۸۰,۰۰۰</span></div>
-            <div class="item"><span>کارامل ماکیاتو</span> <span class="price">۲۵۰,۰۰۰</span></div>
-            <div class="item"><span>لاته وانیل</span> <span class="price">۲۵۰,۰۰۰</span></div>
-            <div class="item"><span>موکا</span> <span class="price">۲۵۰,۰۰۰</span></div>
-            <div class="item"><span>آفوگاتو</span> <span class="price">۱۹۰,۰۰۰</span></div>
-            <div class="item"><span>ترک</span> <span class="price">۱۱۰,۰۰۰</span></div>
-            <div class="item"><span>هات چاکلت</span> <span class="price">۲۶۰,۰۰۰</span></div>
-            <div class="item"><span>وایت چاکلت</span> <span class="price">۲۶۰,۰۰۰</span></div>
-        </div>
+<main>
 
-        <!-- بار سرد -->
-        <div class="category">
-            <h2>بار سرد</h2>
-            <div class="item"><span>آیس لاته</span> <span class="price">۲۰۰,۰۰۰</span></div>
-            <div class="item"><span>آیس آمریکانو</span> <span class="price">۱۵۰,۰۰۰</span></div>
-            <div class="item"><span>آیس موکا</span> <span class="price">۲۵۰,۰۰۰</span></div>
-            <div class="item"><span>آیس لاته وانیل</span> <span class="price">۲۵۰,۰۰۰</span></div>
-            <div class="item"><span>آیس کارامل ماکیاتو</span> <span class="price">۲۵۰,۰۰۰</span></div>
-            <div class="item"><span>آیس تی</span> <span class="price">۱۵۰,۰۰۰</span></div>
-        </div>
+  <section>
+    <h2>☕ بار گرم</h2>
+    <div class="item"><div class="name">اسپرسو</div><div class="dots"></div><div class="price">۹۵</div></div>
+    <div class="item"><div class="name">آمریکانو</div><div class="dots"></div><div class="price">۱۱۰</div></div>
+    <div class="item"><div class="name">لاته</div><div class="dots"></div><div class="price">۱۳۰</div></div>
+    <div class="item"><div class="name">کاپوچینو</div><div class="dots"></div><div class="price">۱۳۰</div></div>
+    <div class="item"><div class="name">موکا</div><div class="dots"></div><div class="price">۱۵۰</div></div>
+    <div class="item"><div class="name">هات چاکلت</div><div class="dots"></div><div class="price">۱۵۰</div></div>
+  </section>
 
-        <!-- چای و دمنوش -->
-        <div class="category">
-            <h2>چای و دمنوش</h2>
-            <div class="item"><span>چای سیاه</span> <span class="price">۶۰,۰۰۰</span></div>
-            <div class="item"><span>چای ماسالا</span> <span class="price">۲۶۰,۰۰۰</span></div>
-            <div class="item"><span>چای کرک</span> <span class="price">۲۶۰,۰۰۰</span></div>
-            <div class="item"><span>دمنوش چای ترش و لیمو</span> <span class="price">۱۲۰,۰۰۰</span></div>
-            <div class="item"><span>دمنوش آرامش</span> <span class="price">۱۲۰,۰۰۰</span></div>
-        </div>
+  <section>
+    <h2>🧊 بار سرد</h2>
+    <div class="item"><div class="name">آیس آمریکانو</div><div class="dots"></div><div class="price">۱۲۰</div></div>
+    <div class="item"><div class="name">آیس لاته</div><div class="dots"></div><div class="price">۱۴۰</div></div>
+    <div class="item"><div class="name">آیس موکا</div><div class="dots"></div><div class="price">۱۶۰</div></div>
+    <div class="item"><div class="name">فراپه</div><div class="dots"></div><div class="price">۱۶۰</div></div>
+  </section>
 
-        <!-- شیک -->
-        <div class="category">
-            <h2>شیک</h2>
-            <div class="item"><span>شیک وانیل</span> <span class="price">۲۵۰,۰۰۰</span></div>
-            <div class="item"><span>شیک شکلات</span> <span class="price">۲۵۰,۰۰۰</span></div>
-            <div class="item"><span>شیک توت فرنگی</span> <span class="price">۲۷۰,۰۰۰</span></div>
-            <div class="item"><span>شیک کره بادام زمینی</span> <span class="price">۲۷۰,۰۰۰</span></div>
-            <div class="item"><span>شیک قهوه</span> <span class="price">۲۷۰,۰۰۰</span></div>
-            <div class="item"><span>شیک فلامینگو</span> <span class="price">۲۷۰,۰۰۰</span></div>
-            <div class="item"><span>شیک های بای</span> <span class="price">۲۷۰,۰۰۰</span></div>
-        </div>
+  <section>
+    <h2>🍵 چای و دمنوش</h2>
+    <div class="item"><div class="name">چای سیاه</div><div class="dots"></div><div class="price">۸۰</div></div>
+    <div class="item"><div class="name">دمنوش</div><div class="dots"></div><div class="price">۹۵</div></div>
+    <div class="item"><div class="name">چای ماسالا</div><div class="dots"></div><div class="price">۱۲۰</div></div>
+  </section>
 
-        <!-- کیک و دسر -->
-        <div class="category">
-            <h2>کیک و دسر</h2>
-            <div class="item"><span>وافل مخصوص</span> <span class="price">۷۰۰,۰۰۰</span></div>
-            <div class="item"><span>شکو موز</span> <span class="price">۵۰۰,۰۰۰</span></div>
-            <div class="item"><span>چیزکیک</span> <span class="price">۲۵۰,۰۰۰</span></div>
-            <div class="item"><span>کیک شکلاتی</span> <span class="price">۱۹۵,۰۰۰</span></div>
-        </div>
+  <section>
+    <h2>🥤 شیک</h2>
+    <div class="item"><div class="name">شیک شکلات</div><div class="dots"></div><div class="price">۱۷۰</div></div>
+    <div class="item"><div class="name">شیک وانیل</div><div class="dots"></div><div class="price">۱۷۰</div></div>
+    <div class="item"><div class="name">شیک نوتلا</div><div class="dots"></div><div class="price">۱۹۰</div></div>
+  </section>
 
-        <!-- ماکتل -->
-        <div class="category">
-            <h2>ماکتل</h2>
-            <div class="item"><span>لیموناد</span> <span class="price">۲۰۰,۰۰۰</span></div>
-            <div class="item"><span>موهیتو</span> <span class="price">۲۳۰,۰۰۰</span></div>
-            <div class="item"><span>رد موهیتو</span> <span class="price">۲۳۰,۰۰۰</span></div>
-            <div class="item"><span>لیدی کیلر</span> <span class="price">۲۴۰,۰۰۰</span></div>
-            <div class="item"><span>هاوایی</span> <span class="price">۲۶۰,۰۰۰</span></div>
-            <div class="item"><span>سان شاین</span> <span class="price">۲۶۰,۰۰۰</span></div>
-        </div>
+  <section>
+    <h2>🍰 کیک و دسر</h2>
+    <div class="item"><div class="name">چیز کیک</div><div class="dots"></div><div class="price">۱۴۵</div></div>
+    <div class="item"><div class="name">کیک شکلاتی</div><div class="dots"></div><div class="price">۱۳۵</div></div>
+    <div class="item"><div class="name">تیرامیسو</div><div class="dots"></div><div class="price">۱۶۵</div></div>
+  </section>
 
-        <!-- اسموتی -->
-        <div class="category">
-            <h2>اسموتی</h2>
-            <div class="item"><span>آوشن</span> <span class="price">۲۹۰,۰۰۰</span></div>
-            <div class="item"><span>پشن</span> <span class="price">۲۹۰,۰۰۰</span></div>
-            <div class="item"><span>رد لاین</span> <span class="price">۲۹۰,۰۰۰</span></div>
-            <div class="item"><span>تروپیکال</span> <span class="price">۲۹۰,۰۰۰</span></div>
-        </div>
+  <section>
+    <h2>🍹 ماکتل</h2>
+    <div class="item"><div class="name">موحدو</div><div class="dots"></div><div class="price">۱۶۰</div></div>
+    <div class="item"><div class="name">سونرایز</div><div class="dots"></div><div class="price">۱۶۰</div></div>
+    <div class="item"><div class="name">پینا کولادا</div><div class="dots"></div><div class="price">۱۸۰</div></div>
+  </section>
 
-        <!-- صبحانه -->
-        <div class="category">
-            <h2>صبحانه</h2>
-            <div class="item"><span>نیمرو</span> <span class="price">۸۵,۰۰۰</span></div>
-            <div class="item"><span>املت</span> <span class="price">۱۲۵,۰۰۰</span></div>
-            <div class="item"><span>سوسیس تخم مرغ</span> <span class="price">۱۸۰,۰۰۰</span></div>
-            <div class="item"><span>املت مخصوص</span> <span class="price">۲۴۰,۰۰۰</span></div>
-            <div class="item"><span>صبحانه ایرانی</span> <span class="price">۲۴۰,۰۰۰</span></div>
-            <div class="item"><span>صبحانه انگلیسی</span> <span class="price">۲۸۰,۰۰۰</span></div>
-            <div class="item"><span>اوتمیل کره بادام زمینی</span> <span class="price">۱۷۵,۰۰۰</span></div>
-            <div class="item"><span>اوتمیل موز شکلات</span> <span class="price">۲۰۰,۰۰۰</span></div>
-            <div class="item"><span>چاپاتا نیمرو بیکن</span> <span class="price">۱۵۰,۰۰۰</span></div>
-            <div class="item"><span>چاپاتا پنیر و ریحون</span> <span class="price">۱۵۰,۰۰۰</span></div>
-        </div>
+  <section>
+    <h2>🍓 اسموتی</h2>
+    <div class="item"><div class="name">اسموتی توت‌فرنگی</div><div class="dots"></div><div class="price">۱۵۰</div></div>
+    <div class="item"><div class="name">اسموتی موز</div><div class="dots"></div><div class="price">۱۵۰</div></div>
+    <div class="item"><div class="name">اسموتی مخلوط</div><div class="dots"></div><div class="price">۱۶۵</div></div>
+  </section>
 
-        <!-- پیش غذا -->
-        <div class="category">
-            <h2>پیش غذا</h2>
-            <div class="item"><span>سیب ساده</span> <span class="price">۱۶۰,۰۰۰</span></div>
-            <div class="item"><span>سیب آلفردو</span> <span class="price">۲۲۵,۰۰۰</span></div>
-            <div class="item"><span>سیب دیپ</span> <span class="price">۲۷۵,۰۰۰</span></div>
-            <div class="item"><span>تست آلفردو</span> <span class="price">۲۴۵,۰۰۰</span></div>
-            <div class="item"><span>تست قارچ و کوکتل</span> <span class="price">۲۴۵,۰۰۰</span></div>
-            <div class="item"><span>سالاد سزار گریل</span> <span class="price">۴۳۵,۰۰۰</span></div>
-            <div class="item"><span>سالاد سزار سوخاری</span> <span class="price">۴۵۵,۰۰۰</span></div>
-        </div>
+  <section>
+    <h2>🍳 صبحانه</h2>
+    <div class="item"><div class="name">صبحانه انگلیسی</div><div class="dots"></div><div class="price">۲۸۰</div></div>
+    <div class="item"><div class="name">املت ویژه</div><div class="dots"></div><div class="price">۱۸۰</div></div>
+    <div class="item"><div class="name">نان و پنیر و گردو</div><div class="dots"></div><div class="price">۱۲۰</div></div>
+  </section>
 
-        <!-- ساندویچ و پاستا -->
-        <div class="category">
-            <h2>ساندویچ و پاستا</h2>
-            <div class="item"><span>برگر ساده</span> <span class="price">۵۵۰,۰۰۰</span></div>
-            <div class="item"><span>چیزبرگر</span> <span class="price">۵۸۵,۰۰۰</span></div>
-            <div class="item"><span>ماشروم برگر</span> <span class="price">۵۶۰,۰۰۰</span></div>
-            <div class="item"><span>زینگر</span> <span class="price">۳۵۵,۰۰۰</span></div>
-            <div class="item"><span>هات داگ قارچ و پنیر</span> <span class="price">۴۶۵,۰۰۰</span></div>
-            <div class="item"><span>پنینی مرغ و اسفناج</span> <span class="price">۵۸۵,۰۰۰</span></div>
-            <div class="item"><span>پاستا آلفردو گریل</span> <span class="price">۵۷۵,۰۰۰</span></div>
-            <div class="item"><span>پاستا آلفردو سوخاری</span> <span class="price">۵۹۵,۰۰۰</span></div>
-        </div>
-    </div>
+  <section>
+    <h2>🥗 پیش‌غذا</h2>
+    <div class="item"><div class="name">سیب‌زمینی سرخ‌کرده</div><div class="dots"></div><div class="price">۱۱۰</div></div>
+    <div class="item"><div class="name">ناچو</div><div class="dots"></div><div class="price">۱۶۰</div></div>
+    <div class="item"><div class="name">سالاد سزار</div><div class="dots"></div><div class="price">۱۹۰</div></div>
+  </section>
+
+  <section>
+    <h2>🥪 ساندویچ و پاستا</h2>
+    <div class="item"><div class="name">ساندویچ مرغ</div><div class="dots"></div><div class="price">۲۲۰</div></div>
+    <div class="item"><div class="name">برگر ویژه</div><div class="dots"></div><div class="price">۲۶۰</div></div>
+    <div class="item"><div class="name">پاستا آلفردو</div><div class="dots"></div><div class="price">۲۴۰</div></div>
+    <div class="item"><div class="name">پاستا پستو</div><div class="dots"></div><div class="price">۲۴۰</div></div>
+  </section>
+
+</main>
+
+<footer>
+  کافه خانلی
+</footer>
 
 </body>
 </html>
